@@ -27,6 +27,7 @@ def rects():
     for i in range(objectsQnt):
         pygame.draw.rect(window,(randint(0,255),randint(0,255),randint(0,255)),(randint(-50,450),randint(-50,450),randint(25,100),randint(25,100)))
         pygame.display.update()
+        pygame.event.get()
     endtime = time.time()
     elapsedtime = int(endtime - starttime)
     marks = int(objectsQnt / elapsedtime)
@@ -39,6 +40,7 @@ def circles():
     for i in range(objectsQnt):
         pygame.draw.circle(window,(randint(0,255),randint(0,255),randint(0,255)),(randint(0,450),randint(0,450)),randint(20,100))
         pygame.display.update()
+        pygame.event.get()
     endtime = time.time()
     elapsedtime = int(endtime - starttime)
     marks = int(objectsQnt / elapsedtime)
@@ -51,6 +53,7 @@ def lines():
     for i in range(objectsQnt):
         pygame.draw.line(window,(randint(0,255),randint(0,255),randint(0,255)),(randint(-50,550),randint(-50,550)),(randint(-50,550),randint(-50,550)))
         pygame.display.update()
+        pygame.event.get()
     endtime = time.time()
     elapsedtime = int(endtime - starttime)
     marks = int(objectsQnt / elapsedtime)
@@ -64,6 +67,7 @@ def texts():
         testText = arial40.render("test",True,(randint(0,255),randint(0,255),randint(0,255)))
         window.blit(testText,(randint(-50,500),randint(-50,500)))
         pygame.display.update()
+        pygame.event.get()
     endtime = time.time()
     elapsedtime = int(endtime - starttime)
     marks = int(objectsQnt / elapsedtime)
@@ -91,6 +95,9 @@ def help():
 help()
 
 while(True):
+    for event in pygame.event.get():
+        if event == pygame.QUIT:
+            break
     command = input("> ")
     if(command == "everything"):
         benchmarkResult = everything()
