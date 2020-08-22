@@ -11,7 +11,7 @@ objectsQnt = 10000
 
 def setQuantity():
     try:
-        objectsQnt = int(input("Enter objects quantity \nDefault and minimum 1000 \nMore objects - more accuracy, \nIf app crashes, try more objects.\n> "))
+        objectsQnt = int(input("Enter objects quantity \nDefault 10000, minimum 1000 \nMore objects - more measurement accuracy.\n> "))
         print("Quantity set to " + str(objectsQnt) + ".")
     except:
         objectsQnt = 10000
