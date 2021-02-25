@@ -4,7 +4,7 @@ import time
 
 pygame.init()
 window = pygame.display.set_mode((500,500))
-pygame.display.set_caption("XomkaMark CPU Benchmark")
+pygame.display.set_caption("XomkaMark GPU Benchmark")
 arial40 = pygame.font.SysFont("arial",40)
 
 objectsQnt = 10000
