@@ -1,2 +1,2 @@
 # XomkaMark
- Simple graphic CPU benchmark with software rendering.
+ Simple graphic GPU benchmark based on pygame.
